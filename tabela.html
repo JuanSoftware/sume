@@ -53,6 +53,42 @@
             height: 300px;
             object-fit: cover;
         }
+
+        .table-container {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #333;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #555;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #444;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #666;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -62,15 +98,58 @@
         <button id="btnTabela">Tabela</button>
     </nav>
 
-   
-
-    <!-- Conteúdo do seu site aqui -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dados 1</td>
+                    <td>Dados 2</td>
+                    <td>Dados 3</td>
+                </tr>
+                <tr>
+                    <td>Dados 4</td>
+                    <td>Dados 5</td>
+                    <td>Dados 6</td>
+                </tr>
+                <tr>
+                    <td>Dados 7</td>
+                    <td>Dados 8</td>
+                    <td>Dados 9</td>
+                </tr>
+                <tr>
+                    <td>Dados 10</td>
+                    <td>Dados 11</td>
+                    <td>Dados 12</td>
+                </tr>
+                <tr>
+                    <td>Dados 13</td>
+                    <td>Dados 14</td>
+                    <td>Dados 15</td>
+                </tr>
+                <tr>
+                    <td>Dados 16</td>
+                    <td>Dados 17</td>
+                    <td>Dados 18</td>
+                </tr>
+                <tr>
+                    <td>Dados 19</td>
+                    <td>Dados 20</td>
+                    <td>Dados 21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        
-
         // JavaScript para redirecionar ao clicar nos botões
         const btnInicio = document.getElementById('btnInicio');
         const btnDescricao = document.getElementById('btnDescricao');
