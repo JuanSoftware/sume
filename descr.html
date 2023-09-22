@@ -134,9 +134,11 @@
         <label for="info-selector">Data:</label>
         <select id="info-selector">
             <option value="">Selecione uma data</option>
-            <option value="opcao1">07 de Setembro</option>
-            <option value="opcao2">08 de Setembro</option>
-            <option value="opcao3">09 de Setembro</option>
+            <option value="opcao1">18 de Agosto</option>
+            <option value="opcao2">25 de Agosto</option>
+            <option value="opcao3">01 de Setembro</option>
+            <option value="opcao4">08 de Setembro</option>
+            <option value="opcao5">15 de Setembro</option>
         </select>
         <div id="info-container">
             <p></p>
@@ -163,17 +165,44 @@
 
             // Defina as informações correspondentes à opção selecionada
             if (selectedOption === 'opcao1') {
+                infoContainer.style.display = 'block'; // Mostra a área de informações
+            
+                // Defina as informações correspondentes à opção selecionada
                 infoContainer.innerHTML = `
-                    <p>Reunimos</p>
-                `;
+                    <p>
+                        No dia 12 de agosto, visitamos as dependências do IFAM em busca de inspiração e colaboração para enfrentar um desafio complexo. Durante a visita, ficamos impressionados com as instalações e o ambiente inovador da instituição. Após discussões e análises, escolhemos a Diren como nossa parceira para desenvolver uma solução inovadora. Agora, estávamos ansiosos para iniciar essa jornada de criação e inovação, confiantes de que juntos poderíamos alcançar resultados extraordinários que beneficiariam nossa comunidade e além.</p>
+                    <img src="ifam18.jpg" alt="Descrição da imagem">
+                ` ;
+            
             } else if (selectedOption === 'opcao2') {
                 infoContainer.innerHTML = `
-                    <p>Reunimos de novo</p>
+                    <p>No dia 25 de agosto, realizamos uma importante reunião na qual levantamos requisitos essenciais e decidimos a abordagem para resolver a problemática que enfrentávamos. Foi um momento crucial em nosso processo de desenvolvimento, no qual delineamos as etapas e estratégias necessárias para enfrentar o desafio de maneira eficaz.
+
+                        Durante essa reunião, nossa equipe analisou minuciosamente os requisitos do projeto e explorou diversas opções para encontrar a solução ideal. Com base em discussões profundas e trocas de ideias criativas, chegamos a um consenso sobre a abordagem que melhor se adequava às nossas metas e aos recursos disponíveis. Essa decisão representou um marco significativo em nossa jornada rumo à resolução da problemática, e nos encheu de determinação para seguir adiante e transformar nossos planos em ação.</p>
                 `;
             } else if (selectedOption === 'opcao3') {
                 infoContainer.innerHTML = `
-                    <p>Finalizamos</p>
-                `;
+                    <p>
+                        No dia 1º de setembro, realizamos uma reunião sem a presença do orientador, durante a qual distribuímos tarefas entre os membros da equipe. Essa iniciativa demonstrou nossa capacidade de autonomia e colaboração, à medida que trabalhamos juntos para organizar as responsabilidades de forma eficiente. Isso fortaleceu nossa determinação em avançar no projeto e garantir que cada membro estivesse comprometido com sua parte na resolução da problemática em questão. Essa reunião foi mais um passo significativo em nossa jornada para alcançar nossos objetivos.</p>
+                `;}
+            else if (selectedOption === 'opcao4') {
+                infoContainer.innerHTML = `
+                    <p>
+                       
+No dia 8 de setembro, nossa equipe se reuniu para uma discussão importante, na qual deliberamos sobre o nome da equipe, o design do logotipo e outros elementos relacionados à nossa identidade. Foi um momento criativo e colaborativo, no qual compartilhamos ideias e opiniões para tomar decisões cruciais para a identificação do nosso grupo de trabalho.
+
+Durante essa reunião, exploramos várias opções de nomes e conceitos de logotipos que refletissem nossa missão e valores. A troca de ideias e o debate saudável nos permitiram chegar a um consenso sobre esses elementos-chave, estabelecendo assim a base para nossa identidade como equipe. Esse processo não apenas fortaleceu nossa coesão como grupo, mas também nos inspirou a avançar com ainda mais determinação em direção aos nossos objetivos comuns.</p>
+<img src="logo.png" alt="Descrição da imagem">
+                `;}
+            else if (selectedOption === 'opcao5') {
+                infoContainer.innerHTML = `
+                    <p>
+                        
+No dia 15 de setembro, realizamos uma reunião de equipe na qual realocamos tarefas e também nos encontramos com nosso orientador. Durante esse encontro, revisamos nosso progresso até o momento e avaliamos o andamento das atividades atribuídas a cada membro.
+
+A relocação de tarefas pode ter sido necessária para garantir que estávamos aproveitando ao máximo as habilidades e recursos disponíveis dentro da equipe. Além disso, a reunião com o orientador proporcionou orientações valiosas e um feedback essencial para nos ajudar a direcionar nosso projeto de forma mais eficaz.</p>
+<img src="reuniao.png" alt="Descrição da imagem" style="width: 80%; height: auto;">
+                        `;
             } else {
                 infoContainer.style.display = 'none'; // Oculta a área de informações se nenhuma opção for selecionada
             }
