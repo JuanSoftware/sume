@@ -134,11 +134,12 @@
         <label for="info-selector">Data:</label>
         <select id="info-selector">
             <option value="">Selecione uma data</option>
-            <option value="opcao1">18 de Agosto</option>
-            <option value="opcao2">25 de Agosto</option>
-            <option value="opcao3">01 de Setembro</option>
-            <option value="opcao4">08 de Setembro</option>
-            <option value="opcao5">15 de Setembro</option>
+            <option value="opcao1">Semana 1</option>
+            <option value="opcao2">Semana 2</option>
+            <option value="opcao3">Semana 3</option>
+            <option value="opcao4">Semana 4</option>
+            <option value="opcao5">Semana 5</option>
+            <option value="opcao6">Semana 6 e 7</option>
         </select>
         <div id="info-container">
             <p></p>
@@ -203,7 +204,19 @@ No dia 15 de setembro, realizamos uma reunião de equipe na qual realocamos tare
 A relocação de tarefas pode ter sido necessária para garantir que estávamos aproveitando ao máximo as habilidades e recursos disponíveis dentro da equipe. Além disso, a reunião com o orientador proporcionou orientações valiosas e um feedback essencial para nos ajudar a direcionar nosso projeto de forma mais eficaz.</p>
 <img src="reuniao.png" alt="Descrição da imagem" style="width: 80%; height: auto;">
                         `;
-            } else {
+            }
+            else if (selectedOption === 'opcao6') {
+                infoContainer.innerHTML = `
+                    <p>
+                        
+
+                        Nas últimas duas semanas, demos vida às primeiras telas de um projeto gigantesco. Essas representações visuais são o fruto do esforço conjunto da equipe, marcando o início de uma emocionante jornada criativa que promete surpreender à medida que avançamos. Estamos ansiosos para ver o projeto evoluir ainda mais.</p>
+<img src="tela.jpg" alt="Descrição da imagem" style="width: 80%; height: auto;">
+                        `;
+            }
+            
+            
+            else {
                 infoContainer.style.display = 'none'; // Oculta a área de informações se nenhuma opção for selecionada
             }
         });
