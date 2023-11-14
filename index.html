@@ -7,6 +7,7 @@
     <title>Sumé</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twemoji@13.2.0/dist/twemoji.min.css">
     <style>
         body {
             background-color: #0a4a34;
@@ -46,18 +47,17 @@
             display: block;
         }
 
-        /* Alterações para o menu de opções */
         .dropdown-menu {
-            background-color: black; /* Altera a cor de fundo para preto */
+            background-color: black;
         }
 
         .dropdown-item {
-            color: white; /* Altera a cor do texto para branco */
+            color: white;
         }
 
-        /* Novo estilo para os boxes com imagens */
         .container-section {
-            margin-top: 5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
         }
 
         .container-img {
@@ -67,14 +67,14 @@
         }
 
         .info-box {
-            background-color: white; /* Brown color */
+            background-color: white;
             padding: 20px;
             margin-top: 20px;
             border-radius: 5px;
         }
 
         .info-box h3,
-        .info-box p {
+        .info-box p, li {
             color: black;
             margin-bottom: 10px;
         }
@@ -84,36 +84,34 @@
             margin-top: 10px;
         }
 
-        /* Estilos para o novo Box Marrom */
         .brown-box {
             color: white;
             text-align: center;
             padding: 20px;
             border-radius: 10px;
-            margin: 50px auto; /* Centraliza na página */
-            max-width: 600px; /* Define uma largura máxima para o box */
+            margin: 50px auto;
+            max-width: 600px;
         }
 
-        /* Espaço entre as divs */
         .container-wrapper {
-            margin-bottom: 10px;
+            margin-bottom: 70px;
+        }
+
+        .emoji {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-right: 5px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Novo Box Marrom -->
-    <div class="brown-box">
-        <h1>Bem-vindo à Sumé</h1>
-        <p>Conheça nossa equipe e explore nossos projetos.</p>
-    </div>
-
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="Logo do Site">
+                    <img src="logo.png" alt="Logo do Site" style="width: 50px; height: 50px;">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -126,12 +124,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="opcoesMenu" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
-                            <!-- Menu de Opções -->
                             <div class="dropdown-menu" aria-labelledby="opcoesMenu">
-                                <a class="dropdown-item" href="#">Inicio</a>
-                                <a class="dropdown-item" href="#">Linha do tempo</a>
+                                <a class="dropdown-item" href="integrantes.html">Integrantes</a>
+                                <a class="dropdown-item" href="timeline.html">Linha do tempo</a>
                             </div>
-                            <!-- Fim do Menu de Opções -->
                         </li>
                     </ul>
                 </div>
@@ -139,164 +135,47 @@
         </div>
     </header>
 
-    <div class="container-section">
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="tarcisio.jpg" alt="Imagem 1" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Tarcisio Leão</h3>
-                            <p>Licenciado em Matematica, mestrado em História da Educação Matemática na Provincia do Amazonas e Doutorado em História da finalidade da Aritmética na Provincia do Amazonas</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-wrapper text-center">
+        <img src="logo.png" alt="Imagem" style="width: 400px; height: 400px;">
+    </div>
+
+    <div class="brown-box">
+        <h1>Bem-vindo à Sumé <span class="emoji">&#x1F44B;</span></h1>
+    </div>
+
+    <div class="container container-section text-center">
+
+        <div class="info-box">
+            <h3>Descrição</h3>
+            <p>
+                O projeto Sumé visa desenvolver um Software de Gestão de Recursos e Agendamento online para a Diren
+                (Diretoria de Ensino), inspirado na entidade indígena Sumé, considerado o deus das leis e da sabedoria
+                pela tradição tupi-guarani. Este sistema busca promover a educação de qualidade, inovação e uma
+                infraestrutura digital sólida.
+            </p>
         </div>
 
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="diego.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Diego da Silva Raposo</h3>
-                            <p>Diego da Silva Raposo é acadêmico do 4º período do curso de engenharia de Software no Instituto Federal do Amazonas - CMZL. Finalizou o ensino médio em 2019 na Fundação Matias Machline, onde fez o curso técnico em mecatrônica, e onde teve o primeiro contato com programação e também onde despertou seu interesse por tecnologia e por desenvolvimento tecnológico. Desenvolveu em 2019 o projeto Ergos - dispositivo de correção postural, além de conquistar medalha de Ouro na Olimpíada Brasileira de Física e bronze na olimpíada de astronomia e astronáutica durante o ensino médio. Tem como hobbies tocar violão, jogar futsal e realizar treinos de musculação</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="info-box">
+            <h3>Desafios e Cenário Atual</h3>
+            <p>
+                A Diren enfrenta uma defasagem tecnológica na gestão de recursos e agendamentos, onde o processo é
+                manual, resultando em problemas críticos, tais como perda de dados, conflitos nos horários e falta de
+                padronização nos canais de solicitação de agendamento.
+            </p>
         </div>
 
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="rebeca.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Rebeca Sobreira da Silva</h3>
-                            <p>Rebeca Sobreira da Silva é acadêmica do 4° período do curso de Engenharia de Software  no Instituto Federal do Amazonas - IFAM CMZL. Desde o ensino médio, sempre se interessou pela tecnologia através de jogos online. Com o decorrer do tempo, a sua curiosidade sobre a tecnologia foi aumentando e tendo foco diretamente no desenvolvimento de softwares. Por incentivo de amigos e familiares, Rebeca decidiu tentar entrar na área de TI. Em 2022, tornou-se discente no curso de Engenharia de Software (IFAM) com o objetivo de  aprofundar o conhecimento na área de TI.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="info-box">
+            <h3>Objetivos e Importância</h3>
+            <ul>
+                <li>Construir uma infraestrutura resiliente para atender as necessidades do IFAM - Campus Manaus Zona
+                    Leste e outras unidades dos Institutos Federais do Amazonas.</li>
+                <li>Fomentar o desenvolvimento sustentável e inclusivo, garantindo qualidade na educação para todos os
+                    estudantes.</li>
+                <li>Implementar um sistema organizado de agendamento e compartilhamento de recursos para beneficiar a
+                    inclusão de estudantes e melhorar a qualidade de ensino.</li>
+            </ul>
         </div>
 
-
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="juan.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Juan Santos de Oliveira</h3>
-                            <p>Juan Santos de Oliveira iniciou a graduação em Engenharia de Software em 2022 e atualmente está no quarto período. Tem o objetivo de se tornar um desenvolvedor back-end e está trabalhando duro para adquirir as habilidades necessárias. Além dos estudos, tem paixão por criar jogos, o que demonstra sua criatividade e interesse em programação. Nos momentos de lazer, gosta de praticar vôlei, o que também reflete sua disposição para trabalho em equipe e busca por desafios físicos.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="italo.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Italo Freitas do Santos</h3>
-                            <p>Italo Freitas, atualmente no quarto período de Engenharia de Software no IFAM-CMZL, começou seu interesse em tecnologia aos 14 anos, durante o ensino médio. Mais tarde, estudou Economia na UFAM, focando em ciclos financeiros e acumulação de capital. Em 2022, ingressou no curso de Engenharia de Software no IFAM, visando aprimorar suas habilidades em TI. Ele valoriza um estilo de vida equilibrado entre trabalho e lazer, mantendo relações significativas com seus cinco gatos e três cachorros.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="maximus.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Maximus Saulo Guerreiro</h3>
-                            <p>Sou Maximus aluno do quarto período de engenharia de software IFAM-CMZL, e durante minha vida estudei tanto em escola municipal quanto estadual, me interessei por algumas áreas como letras, psicologia e no final do terceiro ano em 2021 pensei em cursar engenharia de software ou Análise e desenvolvimento de sistemas acabou que passei para engenharia de software em 2022 buscando me desenvolver na área e estou gostando bastante do curso, priorizo meus estudos mas também gosto de lazer como sair com os amigos, jogar vôlei, e-sports e por aí vai, sempre estou aberto para novas experiências.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="luciano.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Luciano Carvalho Filarde</h3>
-                            <p>Luciano Filardi, aluno do 4º período de Engenharia de Software no IFAM-CMZL, aplicou sua nota para o IFAM e passou em 2020, tornou-se parte do corpo discente do curso Engenharia de Software do Campus Manaus Zona Leste(IFAM), buscando sempre um aprimoramento profissional na área  da Tecnologia da Informação, trabalhando em colaboração com os demais colegas da turma, estudando todas as fases de um projeto de software e desenvolvendo habilidades a partir de cursos online na área de Desenvolvimento Android Mobile.
-                                O interesse pelo ramo de Desenvolvimento mobile se fez mais presente na minha opção, pois reflete todo um esforço feito por uma equipe em um resultado visível (Aplicativo) a todos os usuários de smartphone, tornando-se assim um trabalho satisfatório.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Image and Info Box -->
-                    <div class="col-md-6">
-                        <img src="alvaro.jpg" alt="Imagem 4" class="container-img">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <h3>Raimundo Dione Álvaro de Araújo</h3>
-                            <p>Raimundo Dione Álvaro de Araújo é um profissional com uma trajetória diversificada no campo administrativo e contábil.Ingressou no curso técnico de Administração na Escola Senac, concluindo-o com sucesso em 2012.Atualmente está cursando o 4º período do curso de Engenharia de Software no IFAM Raimundo Dione dedicou quatro anos de sua carreira como técnico administrativo na Vianet Assessoria Empresarial Ltda desempenhou um papel crucial no apoio às operações administrativas e contábeis da empresa.Atualmente, Raimundo Dione Álvaro de Araújo atua como prestador de serviços para empresas de contabilidade na função de técnico.</p>
-                            <a href="#" class="btn btn-primary">LinkedIn</a>
-                            <a href="#" class="btn btn-secondary ml-2">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

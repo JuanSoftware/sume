@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumé</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twemoji@13.2.0/dist/twemoji.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #0a4a34;
+            color: white;
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            margin-bottom: 20px; /* Adicionado para criar espaço abaixo do header */
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        .navbar-nav a {
+            color: white;
+            margin-right: 20px;
+        }
+
+        .navbar-nav a:hover {
+            color: #44c7e8;
+        }
+
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            background-color: black;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .selector-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff; /* Fundo mais claro */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        #info-selector {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Adicionado espaço entre o seletor e o contêiner de informações */
+        }
+
+        #info-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box h3,
+        .info-box p, li {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            margin-top: 10px;
+        }
+
+        .brown-box {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+
+        .container-wrapper {
+            margin-bottom: 70px;
+        }
+
+        .emoji {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo do Site" style="width: 50px; height: 50px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="opcoesMenu" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+                            <div class="dropdown-menu" aria-labelledby="opcoesMenu">
+                                <a class="dropdown-item" href="index.html">Inicio</a>
+                                <a class="dropdown-item" href="integrantes.html">Integrantes</a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="selector-container">
+        
+        <label for="info-selector">Data:</label>
+        <select id="info-selector">
+            <option value="">Selecione uma data</option>
+            <option value="opcao1">Semana 1</option>
+            <option value="opcao2">Semana 2</option>
+            <option value="opcao3">Semana 3</option>
+            <option value="opcao4">Semana 4</option>
+            <option value="opcao5">Semana 5</option>
+            <option value="opcao6">Semana 6 e 7</option>
+        </select>
+        <div id="info-container">
+            <p></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obter referências aos elementos relevantes
+            var infoSelector = document.getElementById('info-selector');
+            var infoContainer = document.getElementById('info-container');
+    
+            // Adicionar um ouvinte de evento de alteração à seleção
+            infoSelector.addEventListener('change', function () {
+                // Obter o valor selecionado
+                var selectedValue = infoSelector.value;
+    
+                // Limpar o conteúdo atual do contêiner de informações
+                infoContainer.innerHTML = '';
+    
+                // Verificar qual opção foi selecionada e adicionar o conteúdo correspondente
+                switch (selectedValue) {
+                    case 'opcao1':
+                        showInfo(' No dia 12 de agosto, visitamos as dependências do IFAM em busca de inspiração e colaboração para enfrentar um desafio complexo. Durante a visita, ficamos impressionados com as instalações e o ambiente inovador da instituição. Após discussões e análises, escolhemos a Diren como nossa parceira para desenvolver uma solução inovadora. Agora, estávamos ansiosos para iniciar essa jornada de criação e inovação, confiantes de que juntos poderíamos alcançar resultados extraordinários que beneficiariam nossa comunidade e além.',
+                         'ifam18.jpg ');
+                        break;
+                    case 'opcao2':
+                        showInfo('No dia 25 de agosto, realizamos uma importante reunião na qual levantamos requisitos essenciais e decidimos a abordagem para resolver a problemática que enfrentávamos. Foi um momento crucial em nosso processo de desenvolvimento, no qual delineamos as etapas e estratégias necessárias para enfrentar o desafio de maneira eficaz. Durante essa reunião, nossa equipe analisou minuciosamente os requisitos do projeto e explorou diversas opções para encontrar a solução ideal. Com base em discussões profundas e trocas de ideias criativas, chegamos a um consenso sobre a abordagem que melhor se adequava às nossas metas e aos recursos disponíveis. Essa decisão representou um marco significativo em nossa jornada rumo à resolução da problemática, e nos encheu de determinação para seguir adiante e transformar nossos planos em ação.', 
+                        );
+                        break;
+                    case 'opcao3':
+                        showInfo(' No dia 1º de setembro, realizamos uma reunião sem a presença do orientador, durante a qual distribuímos tarefas entre os membros da equipe. Essa iniciativa demonstrou nossa capacidade de autonomia e colaboração, à medida que trabalhamos juntos para organizar as responsabilidades de forma eficiente. Isso fortaleceu nossa determinação em avançar no projeto e garantir que cada membro estivesse comprometido com sua parte na resolução da problemática em questão. Essa reunião foi mais um passo significativo em nossa jornada para alcançar nossos objetivos.');
+                        break;
+                    case 'opcao4':
+                        showInfo('No dia 8 de setembro, nossa equipe se reuniu para uma discussão importante, na qual deliberamos sobre o nome da equipe, o design do logotipo e outros elementos relacionados à nossa identidade. Foi um momento criativo e colaborativo, no qual compartilhamos ideias e opiniões para tomar decisões cruciais para a identificação do nosso grupo de trabalho. Durante essa reunião, exploramos várias opções de nomes e conceitos de logotipos que refletissem nossa missão e valores. A troca de ideias e o debate saudável nos permitiram chegar a um consenso sobre esses elementos-chave, estabelecendo assim a base para nossa identidade como equipe. Esse processo não apenas fortaleceu nossa coesão como grupo, mas também nos inspirou a avançar com ainda mais determinação em direção aos nossos objetivos comuns.', 
+                        'logo.png');
+                        break;
+                    case 'opcao5':
+                        showInfo('No dia 15 de setembro, realizamos uma reunião de equipe na qual realocamos tarefas e também nos encontramos com nosso orientador. Durante esse encontro, revisamos nosso progresso até o momento e avaliamos o andamento das atividades atribuídas a cada membro. A relocação de tarefas pode ter sido necessária para garantir que estávamos aproveitando ao máximo as habilidades e recursos disponíveis dentro da equipe. Além disso, a reunião com o orientador proporcionou orientações valiosas e um feedback essencial para nos ajudar a direcionar nosso projeto de forma mais eficaz.', 
+                        'reuniao.png');
+                        break;
+                    case 'opcao6':
+                        showInfo('Nas últimas duas semanas, demos vida às primeiras telas de um projeto gigantesco. Essas representações visuais são o fruto do esforço conjunto da equipe, marcando o início de uma emocionante jornada criativa que promete surpreender à medida que avançamos. Estamos ansiosos para ver o projeto evoluir ainda mais.', 
+                        'tela.jpg');
+                        break;
+                    default:
+                        // Caso nenhuma opção válida seja selecionada
+                        infoContainer.innerHTML = '<p>Por favor, selecione uma data.</p>';
+                }
+            });
+    
+            // Função para exibir o texto e a imagem no contêiner de informações
+            function showInfo(text, imagePath) {
+                var infoBox = document.createElement('div');
+                infoBox.className = 'info-box';
+
+                var infoText = document.createElement('p');
+                infoText.textContent = text;
+
+                if (imagePath) {
+                    var infoImage = document.createElement('img');
+                    infoImage.src = imagePath;
+                    infoImage.style.width = '100%'; // Ajuste o tamanho conforme necessário
+
+                    // Limitar o tamanho da imagem para 200x200 pixels
+                    infoImage.style.maxWidth = '400px';
+                    infoImage.style.maxHeight = '400px';
+
+                    infoBox.appendChild(infoImage);
+                }
+
+                infoBox.appendChild(infoText);
+                infoContainer.appendChild(infoBox);
+            }
+        });
+    </script>
+</body>
+
+</html>
