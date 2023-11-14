@@ -166,12 +166,15 @@
         <label for="info-selector">Data:</label>
         <select id="info-selector">
             <option value="">Selecione uma data</option>
-            <option value="opcao1">Semana 1</option>
-            <option value="opcao2">Semana 2</option>
-            <option value="opcao3">Semana 3</option>
-            <option value="opcao4">Semana 4</option>
-            <option value="opcao5">Semana 5</option>
-            <option value="opcao6">Semana 6 e 7</option>
+            <option value="opcao1">Passo 1</option>
+            <option value="opcao2">Passo 2</option>
+            <option value="opcao3">Passo 3</option>
+            <option value="opcao4">Passo 4</option>
+            <option value="opcao5">Passo 5</option>
+            <option value="opcao6">Passo 6</option>
+            <option value="opcao7">Passo 7</option>
+            <option value="opcao8">Passo 8</option>
+            <option value="opcao9">Passo 9</option>
         </select>
         <div id="info-container">
             <p></p>
@@ -219,6 +222,18 @@
                     case 'opcao6':
                         showInfo('Nas últimas duas semanas, demos vida às primeiras telas de um projeto gigantesco. Essas representações visuais são o fruto do esforço conjunto da equipe, marcando o início de uma emocionante jornada criativa que promete surpreender à medida que avançamos. Estamos ansiosos para ver o projeto evoluir ainda mais.', 
                         'tela.jpg');
+                        break;
+                    case 'opcao7':
+                        showInfo('A equipe participou recentemente de eventos de grande destaque, como a Campus Party e uma semana intensiva de engenharia de software promovida pelo IFAM. Na Campus Party, os membros absorveram conhecimentos por meio de palestras e interações valiosas, promovendo uma perspectiva inovadora para futuros projetos. A imersão na engenharia de software proporcionou uma atualização significativa em metodologias ágeis e práticas avançadas. Além disso, as aulas de Design Thinking contribuíram para uma abordagem mais centrada no usuário, enriquecendo a criatividade e a colaboração da equipe. Essas experiências combinadas fortaleceram tanto as habilidades técnicas quanto a mentalidade inovadora da equipe, preparando-os para desafios futuros no âmbito acadêmico e tecnológico.',
+                        'cp.jpg');
+                        break;
+                    case 'opcao8':
+                        showInfo('Os alunos Juan e Ítalo brilharam ao apresentarem um inovador Churrasco Vegano. Demonstrando habilidades culinárias e criatividade, a dupla proporcionou uma experiência gastronômica única, desmistificando a ideia de que um churrasco precisa ser baseado em carne. Com uma seleção cuidadosa de ingredientes à base de plantas e técnicas de preparo excepcionais, eles surpreenderam os participantes com sabores ricos e texturas deliciosas. A apresentação de Juan e Ítalo não apenas elevou o patamar das opções veganas, mas também destacou a versatilidade e a sustentabilidade associadas a escolhas alimentares conscientes. Essa iniciativa não apenas cativou os paladares, mas também abriu espaço para discussões sobre opções alimentares saudáveis e ecologicamente responsáveis.',
+                        );
+                        break;
+                    case 'opcao9':
+                        showInfo('Com satisfação, informamos que o protótipo desenvolvido no Figma atingiu sua forma final. Através de uma colaboração dedicada e iterações cuidadosas, conseguimos criar uma representação visual e funcional do nosso projeto. Este marco não só valida nossos conceitos, mas também proporciona uma base sólida para as próximas fases do desenvolvimento. O protótipo no Figma é mais do que uma simples visualização; é um passo crucial em direção à concretização do nosso produto, fornecendo uma plataforma robusta para avançarmos com confiança e clareza. Estamos entusiasmados com o progresso alcançado e ansiosos para levar adiante esse sucesso em nossos próximos passos.',
+                        'final.png');
                         break;
                     default:
                         // Caso nenhuma opção válida seja selecionada
